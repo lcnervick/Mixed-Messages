@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	--theme-purple: hsl(315, 46%, 25%);
+	--theme-blue: hsl(197, 70%, 70%);
+	--theme-yellow: hsl(61, 100%, 85%);
+	--theme-gray: hsl(0, 0%, 91%);
+	--theme-darkgray: hsl(0 0% 30%);
+	--theme-beige: hsl(60, 13%, 82%);
+	color: var(--theme-darkgray);
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+	font-family: 'Work Sans', sans-serif;
+	background-color: var(--theme-purple);
+}
+
