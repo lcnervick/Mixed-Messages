@@ -24,12 +24,23 @@ const meals = {
 	}
 };
 
+/**
+ * getRandomIngredient
+ * @param {Array} options An array of ingredients
+ * @returns	A string containing the randomly chosen ingredient
+ */
 const getRandomIngredient = (options) => {
 	console.log("Options", options)
 	let index = Math.floor(Math.random()*options.length);
 	return options[index];
 }
 
+/**
+ * getMeal
+ * @param {String} type The meal that was selected (breakfast, lunch, dinner or dessert)
+ * @param {Bool} withDessert Whether to include desert with the meal selection
+ * @returns A string with the randomly chosen meal ingredients
+ */
 const getMeal = (type, withDessert = false) => {
 	console.log("Type:", type, "Dessert", withDessert);
 	if(!['breakfast', 'lunch', 'dinner', 'dessert'].includes(type)) return 'Invalid Meal Type!';
@@ -50,21 +61,20 @@ const getMeal = (type, withDessert = false) => {
 	return meal;
 }
 
+/**
+ * initMealPlan
+ * @param {Event} evt The event interface from the button click
+ */
 const initMealPlan = (evt) => {
 	const mealType = document.querySelector('input[name="meal-type"]:checked')?.value ?? "breakfast";
 	const includeDessert = document.getElementById('include-dessert')?.checked ?? false;
 	const message = getMeal(mealType, includeDessert);
-
 	document.getElementById('meal-output').innerHTML = message;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-	// const mealOptions = document.getElementById('meal-form');
-	// console.log(mealOptions);
 	let goButton = document.getElementById('get-meal');
-	console.log(goButton);
 	goButton.addEventListener('click', function(evt) {
-		console.log("Clicked", evt);
 		initMealPlan(evt);
 	});
 });
