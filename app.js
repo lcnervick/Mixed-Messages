@@ -20,7 +20,7 @@ const meals = {
 	dessert: {
 		bases: ['vanilla ice cream', 'chocolate ice cream', 'strawberry ice cream', 'bubble-gum ice cream', 'turtle ice cream', 'chocolate chip cookies', 'ice cream sandwiches', 'peanut butter cookies', 'apple pie', 'pecan pie', 'pumpkin pie', 'cheesecake', 'chocolate cake', 'birthday cake', 'plumb pie', 'Hantzel and Grettle pie', 'strawberry pie', 'mag pie', 'candy bars', 'lollipops', 'frozen yogurt', 'popsicles'],
 		toppings: ['whipped cream', 'chocolate syrup', 'chopped nuts', 'caramel', 'something rainbow-y', 'party sprinkles', 'cherries', 'blueberry sauce', 'strawberry sauce', 'awesome sauce', 'sour cream', 'powdered sugar', 'regular ol\' sugar', 'brown sugar', 'icing', 'M&Ms', 'chocolate chips'],
-		hintOf: ['hazelnut', 'cinnamon', 'fart', 'wet dog', 'chocolate', 'curry', 'basil', 'brown sugar', 'coffee', 'hot pepper', 'lemon', 'lime', 'sea salt', 'sherry', 'cognac', 'bourbon']
+		hintOf: ['hazelnut', 'cinnamon', 'fart', 'wet dog', 'curry', 'basil', 'brown sugar', 'coffee', 'hot pepper', 'lemon', 'lime', 'sea salt', 'sherry', 'cognac', 'bourbon']
 	}
 };
 
