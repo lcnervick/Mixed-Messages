@@ -12,6 +12,20 @@
 		<script src="app.js"></script>
 	</head>
 	<body>
-
+		<h1>Meal Planner</h1>
+		<div id="container">
+			<form id="meal-form" action="#">
+				<label for="breakfast">Breakfast</label>
+				<input type="radio" name="meal-type" id="breakfast" value="breakfast" />
+				<label for="lunch">Lunch</label>
+				<input type="radio" name="meal-type" id="lunch" value="lunch" />
+				<label for="breakfast">Breakfast</label>
+				<input type="radio" name="meal-type" id="dinner" value="dinner" />
+				<label for="include-dessert">Include Dessert?</label>
+				<input type="checkbox" name="include-dessert" id="include-dessert" checked="checked" />
+			</form>
+			<button>Find Meal!</button>
+			<div id="meal-output"></div>
+		</div>
 	</body>
 </html>
