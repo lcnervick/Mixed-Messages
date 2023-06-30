@@ -14,17 +14,19 @@
 	<body>
 		<h1>Meal Planner</h1>
 		<div id="container">
-			<form id="meal-form" action="#">
+			<form>	
+				<input type="radio" name="meal-type" id="breakfast" value="breakfast" checked=""checked />
 				<label for="breakfast">Breakfast</label>
-				<input type="radio" name="meal-type" id="breakfast" value="breakfast" />
-				<label for="lunch">Lunch</label>
 				<input type="radio" name="meal-type" id="lunch" value="lunch" />
-				<label for="breakfast">Breakfast</label>
+				<label for="lunch">Lunch</label>
 				<input type="radio" name="meal-type" id="dinner" value="dinner" />
-				<label for="include-dessert">Include Dessert?</label>
+				<label for="breakfast">Dinner</label>
 				<input type="checkbox" name="include-dessert" id="include-dessert" checked="checked" />
+				<label for="include-dessert">Include Dessert?</label>
 			</form>
-			<button>Find Meal!</button>
+
+			<button id="get-meal">Find Meal!</button>
+
 			<div id="meal-output"></div>
 		</div>
 	</body>

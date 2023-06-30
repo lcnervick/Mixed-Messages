@@ -25,11 +25,13 @@ const meals = {
 };
 
 const getRandomIngredient = (options) => {
+	console.log("Options", options)
 	let index = Math.floor(Math.random()*options.length);
 	return options[index];
 }
 
 const getMeal = (type, withDessert = false) => {
+	console.log("Type:", type, "Dessert", withDessert);
 	if(!['breakfast', 'lunch', 'dinner', 'dessert'].includes(type)) return 'Invalid Meal Type!';
 	let meal = '';
 
@@ -40,7 +42,7 @@ const getMeal = (type, withDessert = false) => {
 	meal += `Your ${type} today will be ${entree} with a side of ${side} and a tall glass of ${drink}.`;
 
 	if(withDessert) {
-		const dessert = getRandomIngredient(meals.dessert.base);
+		const dessert = getRandomIngredient(meals.dessert.bases);
 		const topping = getRandomIngredient(meals.dessert.toppings);
 		const hintOf = getRandomIngredient(meals.dessert.hintOf);
 		meal += `<br><br>For dessert, your taste buds should enjoy our signature ${dessert} topped with ${topping} and finished with a hint of ${hintOf}.`;
@@ -48,13 +50,21 @@ const getMeal = (type, withDessert = false) => {
 	return meal;
 }
 
-
-const mealOptions = document.getElementById('meal-form');
-mealOptions.addEventListener('submit', (ele, evt) => {
-	evt.preventDefault();
+const initMealPlan = (evt) => {
 	const mealType = document.querySelector('input[name="meal-type"]:checked')?.value ?? "breakfast";
 	const includeDessert = document.getElementById('include-dessert')?.checked ?? false;
 	const message = getMeal(mealType, includeDessert);
 
 	document.getElementById('meal-output').innerHTML = message;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+	// const mealOptions = document.getElementById('meal-form');
+	// console.log(mealOptions);
+	let goButton = document.getElementById('get-meal');
+	console.log(goButton);
+	goButton.addEventListener('click', function(evt) {
+		console.log("Clicked", evt);
+		initMealPlan(evt);
+	});
 });
