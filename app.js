@@ -72,9 +72,9 @@ const initMealPlan = (evt) => {
 	document.getElementById('meal-output').innerHTML = message;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
 	let goButton = document.getElementById('get-meal');
 	goButton.addEventListener('click', function(evt) {
 		initMealPlan(evt);
 	});
-});
+// });
